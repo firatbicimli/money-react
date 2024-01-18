@@ -17,13 +17,24 @@ const Product = ({ product, basket, setBasket }) => {
         }
     }
 
+    const removeBasket = () => {
+        const currentBasket = basket.find(item => item.id === product.id)
+        const basketWithoutCurrent = basket.filter(item => item.id != product.id)
+            currentBasket.amount -= 1
+            if (currentBasket.amount === 0) {
+                setBasket([...basketWithoutCurrent])
+            } else {
+                setBasket([...basketWithoutCurrent, currentBasket])
+            }
+    }
+
   return (
     <>
         <div className='product'>
             <h6>{product.title}</h6>
             <div className='price'>$ {product.price}</div>
             <div className='actions'>
-                <button>Sat</button>
+                <button onClick={removeBasket}>Sat</button>
                 <span className='amount'>{basketItem && basketItem.amount || 0}</span>
                 <button onClick={addBasket}>Satın Al</button>
             </div>
