@@ -1,3 +1,7 @@
+
+<img width="1710" alt="Screenshot 2024-01-22 at 13 54 08" src="https://github.com/firatbicimli/money-react/assets/102663969/c668b10c-93ac-43a4-9f6f-dbddb529d458">
+
+#Proturk kanalında Tayfun Erbilen'in React örnek projelerinden para harcama web sitesinin clone projesi
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
