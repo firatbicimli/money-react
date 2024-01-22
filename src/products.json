@@ -2,21 +2,25 @@
     {
         "id": 1,
         "title": "Sakız",
-        "price": "0.5"
+        "price": "0.5",
+        "image": "https://www.elvan.com.tr/first-sensations-nane-sakizli-27-gr-1-adet-sakiz-first-2477-15-K.jpg"
     },
     {
         "id": 2,
         "title": "Kola",
-        "price": "6"
+        "price": "6",
+        "image": "https://images.migrosone.com/sanalmarket/product/08010903/8010903_yan-2e2bcb-1650x1650.jpg"
     },
     {
         "id": 3,
         "title": "Ayakkabı",
-        "price": "400"
+        "price": "400",
+        "image": "https://www.ayakkabicity.com/Uploads/UrunResimleri/buyuk/sanzelize-k-07-kadin-sneaker-ayakkabi-47cd.jpg"
     },
     {
         "id": 4,
         "title": "Araba",
-        "price": "40000"
+        "price": "40000",
+        "image": "https://cdn-nq.toyzzshop.com/product/600x600/0f06b_Metal_Cek_Birak_Murat_131_Araba.jpg"
     }
 ]

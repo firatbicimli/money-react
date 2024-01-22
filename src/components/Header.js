@@ -16,6 +16,8 @@ const Header = ({total, money}) => {
 
         <style jsx>{`
         .header {
+            position: sticky;
+            top: 0;
             background: linear-gradient(to bottom, #20b820, #14be2a);
             height: 60px;
             display:flex;

@@ -1,4 +1,5 @@
 import React from 'react'
+import { moneyFormat } from '../helpers'
 
 const Product = ({ product, basket, total, money, setBasket }) => {
 
@@ -31,19 +32,74 @@ const Product = ({ product, basket, total, money, setBasket }) => {
   return (
     <>
         <div className='product'>
+            <img src={product.image}></img>
             <h6>{product.title}</h6>
-            <div className='price'>$ {product.price}</div>
+            <div className='price'>$ {moneyFormat(product.price)}</div>
             <div className='actions'>
-                <button disabled={!basketItem} onClick={removeBasket}>Sat</button>
+                <button className='sell-btn' disabled={!basketItem} onClick={removeBasket}>Sat</button>
                 <span className='amount'>{basketItem && basketItem.amount || 0}</span>
-                <button disabled={total + product.price > money} onClick={addBasket}>Satın Al</button>
+                <button className='buy-btn' disabled={total + product.price > money} onClick={addBasket}>Satın Al</button>
             </div>
             <style jsx>{`
                 .product {
-                padding: 10px;
-                background: #fff;
-                border: 1px solid #ddd;
-                margin-bottom: 20px;
+                    padding: 15px;
+                    background: #fff;
+                    border: 1px solid #ddd;
+                    margin-bottom: 20px;
+                    width: 24%;
+                }
+                .product img {
+                    width: 100%;
+                }
+                 h6 {
+                    font-size: 20px;
+                }
+                .product .price {
+                    font-size: 20px;
+                    color: #179b17;
+                    margin-top: 10px;
+                }
+                .product .actions {
+                    display: flex;
+                    align-items: center;
+                }
+                .actions button {
+                    height: 40px;
+                    padding: 0 15px;
+                    flex: 1;
+                    cursor: pointer;
+                    margin-top: 20px;
+                }
+                .actions button [disabled] {
+                    opacity: .3;
+                    cursor: not-allowed;
+                }
+                .actions .buy-btn {
+                    background-color: #179b17;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: 500;
+                    border-radius: 0 4px 4px 0;
+                }
+                .actions .sell-btn {
+                    background-color: #ccc;
+                    color: #333;
+                    font-size: 14px;
+                    font-weight: 500;
+                    border-radius: 4px 0 0 4px;
+                }
+                .actions .amount {
+                    width: 50px;
+                    text-align: center;
+                    border: 1px solid #ddd;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 17px;
+                    font-weight: bold;
+                    color: #555;
+                    margin-top: 20px;
                 }
             `}</style>
         </div>
